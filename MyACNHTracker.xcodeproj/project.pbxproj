@@ -37,6 +37,19 @@
 		308537FD24C95378007C8CCA /* CreatureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308537FC24C95378007C8CCA /* CreatureDetailView.swift */; };
 		308537FF24C95418007C8CCA /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308537FE24C95418007C8CCA /* PriceView.swift */; };
 		3085380124C95596007C8CCA /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380024C95596007C8CCA /* Styles.swift */; };
+		3085380324CACC34007C8CCA /* CreatureDetailsCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380224CACC34007C8CCA /* CreatureDetailsCardComponent.swift */; };
+		3085380524CACC44007C8CCA /* CreatureMuseumCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380424CACC44007C8CCA /* CreatureMuseumCardComponent.swift */; };
+		3085380724CACDCF007C8CCA /* CreatureTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380624CACDCF007C8CCA /* CreatureTrackerView.swift */; };
+		3085380924CACF38007C8CCA /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 3085380824CACF38007C8CCA /* items.json */; };
+		3085380B24CACF8E007C8CCA /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380A24CACF8E007C8CCA /* Fish.swift */; };
+		3085380D24CAD001007C8CCA /* FishListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380C24CAD001007C8CCA /* FishListRowView.swift */; };
+		3085380F24CAD031007C8CCA /* FishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085380E24CAD031007C8CCA /* FishDetailView.swift */; };
+		3085381124CAD0CA007C8CCA /* FishDetailsCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085381024CAD0CA007C8CCA /* FishDetailsCardComponent.swift */; };
+		3085381324CAD0D8007C8CCA /* FishMuseumCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085381224CAD0D8007C8CCA /* FishMuseumCardComponent.swift */; };
+		3085381524CAD200007C8CCA /* FishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085381424CAD200007C8CCA /* FishViewModel.swift */; };
+		3085381724CAD26F007C8CCA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085381624CAD26F007C8CCA /* SearchBar.swift */; };
+		3085384724CC1251007C8CCA /* creaturesCollection.json in Resources */ = {isa = PBXBuildFile; fileRef = 3085384624CC1251007C8CCA /* creaturesCollection.json */; };
+		3085384924CC143D007C8CCA /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085384824CC143D007C8CCA /* Bundle-Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +83,19 @@
 		308537FC24C95378007C8CCA /* CreatureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureDetailView.swift; sourceTree = "<group>"; };
 		308537FE24C95418007C8CCA /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		3085380024C95596007C8CCA /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		3085380224CACC34007C8CCA /* CreatureDetailsCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureDetailsCardComponent.swift; sourceTree = "<group>"; };
+		3085380424CACC44007C8CCA /* CreatureMuseumCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureMuseumCardComponent.swift; sourceTree = "<group>"; };
+		3085380624CACDCF007C8CCA /* CreatureTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureTrackerView.swift; sourceTree = "<group>"; };
+		3085380824CACF38007C8CCA /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		3085380A24CACF8E007C8CCA /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		3085380C24CAD001007C8CCA /* FishListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishListRowView.swift; sourceTree = "<group>"; };
+		3085380E24CAD031007C8CCA /* FishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetailView.swift; sourceTree = "<group>"; };
+		3085381024CAD0CA007C8CCA /* FishDetailsCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDetailsCardComponent.swift; sourceTree = "<group>"; };
+		3085381224CAD0D8007C8CCA /* FishMuseumCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishMuseumCardComponent.swift; sourceTree = "<group>"; };
+		3085381424CAD200007C8CCA /* FishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewModel.swift; sourceTree = "<group>"; };
+		3085381624CAD26F007C8CCA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		3085384624CC1251007C8CCA /* creaturesCollection.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = creaturesCollection.json; sourceTree = "<group>"; };
+		3085384824CC143D007C8CCA /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +185,8 @@
 			children = (
 				308537F224C93B16007C8CCA /* CoreDataManager.swift */,
 				308537FE24C95418007C8CCA /* PriceView.swift */,
+				3085381624CAD26F007C8CCA /* SearchBar.swift */,
+				3085380624CACDCF007C8CCA /* CreatureTrackerView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -187,6 +215,8 @@
 				308537EC24C8FE52007C8CCA /* CreatureListView.swift */,
 				308537F424C94782007C8CCA /* CreatureListRowView.swift */,
 				308537FC24C95378007C8CCA /* CreatureDetailView.swift */,
+				3085380224CACC34007C8CCA /* CreatureDetailsCardComponent.swift */,
+				3085380424CACC44007C8CCA /* CreatureMuseumCardComponent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +290,7 @@
 				308537C124C8E74D007C8CCA /* JsonApiManager.swift */,
 				308537C324C8E7A4007C8CCA /* APIError.swift */,
 				3085380024C95596007C8CCA /* Styles.swift */,
+				3085384824CC143D007C8CCA /* Bundle-Decodable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -276,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				308537F024C903B0007C8CCA /* creatures.json */,
+				3085380824CACF38007C8CCA /* items.json */,
+				3085384624CC1251007C8CCA /* creaturesCollection.json */,
 			);
 			path = json;
 			sourceTree = "<group>";
@@ -305,7 +338,7 @@
 			children = (
 				308537D524C8E8D0007C8CCA /* Model */,
 				308537D424C8E8CB007C8CCA /* View */,
-				308537D324C8E8C1007C8CCA /* Controller */,
+				308537D324C8E8C1007C8CCA /* ViewModel */,
 			);
 			path = Fish;
 			sourceTree = "<group>";
@@ -364,17 +397,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		308537D324C8E8C1007C8CCA /* Controller */ = {
+		308537D324C8E8C1007C8CCA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3085381424CAD200007C8CCA /* FishViewModel.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		308537D424C8E8CB007C8CCA /* View */ = {
 			isa = PBXGroup;
 			children = (
 				308537D624C8E8E0007C8CCA /* FishListView.swift */,
+				3085380C24CAD001007C8CCA /* FishListRowView.swift */,
+				3085380E24CAD031007C8CCA /* FishDetailView.swift */,
+				3085381024CAD0CA007C8CCA /* FishDetailsCardComponent.swift */,
+				3085381224CAD0D8007C8CCA /* FishMuseumCardComponent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,6 +420,7 @@
 		308537D524C8E8D0007C8CCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3085380A24CACF8E007C8CCA /* Fish.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +572,8 @@
 			files = (
 				308537F124C903B0007C8CCA /* creatures.json in Resources */,
 				3085379F24C8E4B3007C8CCA /* LaunchScreen.storyboard in Resources */,
+				3085384724CC1251007C8CCA /* creaturesCollection.json in Resources */,
+				3085380924CACF38007C8CCA /* items.json in Resources */,
 				3085379C24C8E4B3007C8CCA /* Preview Assets.xcassets in Resources */,
 				3085379924C8E4B3007C8CCA /* Assets.xcassets in Resources */,
 			);
@@ -549,23 +590,34 @@
 				3085379024C8E4AE007C8CCA /* AppDelegate.swift in Sources */,
 				308537E624C8EAA3007C8CCA /* MuseumView.swift in Sources */,
 				3085380124C95596007C8CCA /* Styles.swift in Sources */,
+				3085380724CACDCF007C8CCA /* CreatureTrackerView.swift in Sources */,
 				308537EF24C8FE94007C8CCA /* CreatureViewModel.swift in Sources */,
 				308537CD24C8E88C007C8CCA /* ArtListView.swift in Sources */,
+				3085380B24CACF8E007C8CCA /* Fish.swift in Sources */,
 				308537E224C8E93E007C8CCA /* SeaCreatureListView.swift in Sources */,
 				308537ED24C8FE52007C8CCA /* CreatureListView.swift in Sources */,
 				3085379724C8E4AE007C8CCA /* ContentView.swift in Sources */,
+				3085381324CAD0D8007C8CCA /* FishMuseumCardComponent.swift in Sources */,
+				3085384924CC143D007C8CCA /* Bundle-Decodable.swift in Sources */,
 				308537B924C8E682007C8CCA /* VillagerListView.swift in Sources */,
 				308537F524C94782007C8CCA /* CreatureListRowView.swift in Sources */,
+				3085380F24CAD031007C8CCA /* FishDetailView.swift in Sources */,
+				3085381724CAD26F007C8CCA /* SearchBar.swift in Sources */,
+				3085381524CAD200007C8CCA /* FishViewModel.swift in Sources */,
 				308537FD24C95378007C8CCA /* CreatureDetailView.swift in Sources */,
 				308537BE24C8E6EC007C8CCA /* ACNHApiManager.swift in Sources */,
 				308537E924C8EAC9007C8CCA /* MuseumViewModel.swift in Sources */,
 				308537D224C8E8BB007C8CCA /* BugListView.swift in Sources */,
 				308537C224C8E74D007C8CCA /* JsonApiManager.swift in Sources */,
 				308537DC24C8E90E007C8CCA /* FossilListView.swift in Sources */,
+				3085381124CAD0CA007C8CCA /* FishDetailsCardComponent.swift in Sources */,
 				308537FF24C95418007C8CCA /* PriceView.swift in Sources */,
 				308537EB24C8FD39007C8CCA /* Creature.swift in Sources */,
 				308537B124C8E5C9007C8CCA /* HomeView.swift in Sources */,
+				3085380524CACC44007C8CCA /* CreatureMuseumCardComponent.swift in Sources */,
 				3085379224C8E4AE007C8CCA /* SceneDelegate.swift in Sources */,
+				3085380324CACC34007C8CCA /* CreatureDetailsCardComponent.swift in Sources */,
+				3085380D24CAD001007C8CCA /* FishListRowView.swift in Sources */,
 				308537D724C8E8E0007C8CCA /* FishListView.swift in Sources */,
 				308537F324C93B16007C8CCA /* CoreDataManager.swift in Sources */,
 				308537C424C8E7A4007C8CCA /* APIError.swift in Sources */,

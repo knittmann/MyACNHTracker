@@ -2,23 +2,33 @@
 //  CreatureDetailView.swift
 //  MyACNHTracker
 //
-//  Created by Krista Nittmann on 7/23/20.
+//  Created by Krista Nittmann on 6/28/20.
 //  Copyright © 2020 Krista Nittmann. All rights reserved.
 //
 
-import SwiftUI
-
-struct CreatureDetailView: View {
-    
-    let creature: Creature
-    
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+//import SwiftUI
+//
+//struct CreatureDetailView: View {
+//    
+//    let creature: Creature
+//    
+//    var body: some View {
+//
+//        VStack {
+//            
+//            CreatureDetailsCardComponent(creature: creature)
+//            
+//            CreatureMuseumCardComponent(creature: creature)
+//            
+//            Spacer()
+//        }
+//    }
+//}
 
 //struct CreatureDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CreatureDetailView()
+//        CreatureDetailCardView(fish: fishPreview)
 //    }
 //}
+
+

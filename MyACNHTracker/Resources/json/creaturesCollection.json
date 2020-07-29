@@ -1,0 +1,26 @@
+[
+    {
+        "sourcesheet": "fish",
+        "name": "anchovy",
+        "caught": false,
+        "donated": false
+    },
+    {
+        "sourcesheet": "fish",
+        "name": "angelfish",
+        "caught": false,
+        "donated": false
+    },
+    {
+        "sourcesheet": "insect",
+        "name": "ant",
+        "caught": false,
+        "donated": false
+    },
+    {
+        "sourcesheet": "insect",
+        "name": "evening cicada",
+        "caught": false,
+        "donated": false
+    }
+]

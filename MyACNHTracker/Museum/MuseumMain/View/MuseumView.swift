@@ -56,7 +56,7 @@ struct MuseumView: View {
                 } else if currentFilter == .bugs {
                     BugListView()
                 } else if currentFilter == .fish {
-                    CreatureListView()
+                    FishListView()
                 } else if currentFilter == .fossils {
                     FossilListView()
                 } else if currentFilter == .diving {
