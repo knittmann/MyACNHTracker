@@ -10,11 +10,14 @@ import SwiftUI
 
 struct CreatureTrackerView: View {
     
+//    let fish: Fish
+    
     @State var caught: Bool
     @State var donated: Bool
     
     var caughtImage: String {
         return self.caught ? "checkmark.seal.fill" : "checkmark.seal"
+//        return fish.checkCaught ? "checkmark.seal.fill" : "checkmark.seal"
     }
     
     var donatedImage: String {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AvailabilityCD" representedClassName="AvailabilityCD" syncable="YES">
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isAllDay" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isAllYear" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="monthArrayNorthern" optional="YES" attributeType="Transformable" customClassName="Array&lt;Any&gt;"/>
+        <attribute name="monthArraySouthern" optional="YES" attributeType="Transformable" customClassName="Array&lt;Any&gt;"/>
+        <attribute name="monthNorthern" optional="YES" attributeType="String"/>
+        <attribute name="monthSouthern" optional="YES" attributeType="String"/>
+        <attribute name="rarity" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <relationship name="fish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FishCD" inverseName="availability" inverseEntity="FishCD"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="FishCD" representedClassName="FishCD" syncable="YES">
+        <attribute name="altCatchPhrase" optional="YES" attributeType="Transformable" customClassName="Array&lt;Any&gt;"/>
+        <attribute name="catchPhrase" optional="YES" attributeType="String"/>
+        <attribute name="filename" optional="YES" attributeType="String"/>
+        <attribute name="iconURI" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURI" optional="YES" attributeType="String"/>
+        <attribute name="isCaught" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDonated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="museumPhrase" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="priceCJ" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shadow" optional="YES" attributeType="String"/>
+        <relationship name="availability" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AvailabilityCD" inverseName="fish" inverseEntity="AvailabilityCD"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="FishCD" positionX="-36" positionY="9" width="128" height="253"/>
+        <element name="AvailabilityCD" positionX="0" positionY="153" width="128" height="208"/>
+    </elements>
+</model>
