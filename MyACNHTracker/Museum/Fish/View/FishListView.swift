@@ -12,12 +12,13 @@ import SDWebImageSwiftUI
 
 struct FishListView: View {
     
+    @ObservedObject var viewModel = FishViewModel()
+//    @ObservedObject var viewModel: FishViewModel
+    
     @State private var searchText: String = ""
     @State private var showCancelButton: Bool = false
     
-    private var apiPublisher: AnyPublisher<[String: Fish], Never>?
-    
-    @ObservedObject var viewModel = FishViewModel()
+//    private var apiPublisher: AnyPublisher<[String: Fish], Never>?
     
     var currentFish: [Fish]  {
         return viewModel.fishArray
@@ -31,9 +32,14 @@ struct FishListView: View {
             }
             
             List {
-                ForEach (currentFish.filter { self.searchText.isEmpty ? true : $0.localizedName.lowercased().contains(self.searchText.lowercased())}) { fish in
+                ForEach (currentFish.filter {
+                    self.searchText.isEmpty ? true : $0.localizedName.lowercased().contains(self.searchText.lowercased())
+                }) { fish in
                     FishListRowView(fish: fish)
                 }
+//                ForEach (viewModel.fishArray) { index in
+//                    self.$viewModel.fishArray[index]
+//                }
             }
             .onAppear {UITableView.appearance().separatorStyle = .none}
             .resignKeyboardOnDragGesture()

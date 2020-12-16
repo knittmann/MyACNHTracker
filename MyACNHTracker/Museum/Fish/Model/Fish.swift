@@ -13,49 +13,10 @@ import Foundation
 
 // MARK: - Fish
 struct Fish: Codable, Identifiable {
-    
-    struct FishAvailability: Codable {
-        let monthNorthern: String
-        let monthSouthern: String
-        let time: FishTime
-        let isAllDay: Bool
-        let isAllYear: Bool
-        let location: FishLocation
-        let rarity: FishRarity
-        let monthArrayNorthern, monthArraySouthern: [Int]?
-
-        enum CodingKeys: String, CodingKey {
-            case monthNorthern = "month-northern"
-            case monthSouthern = "month-southern"
-            case time, isAllDay, isAllYear, location, rarity
-            case monthArrayNorthern = "month-array-northern"
-            case monthArraySouthern = "month-array-southern"
-        }
-        
-        var availableMonths: String {
-            var months = ""
-            if isAllYear {
-                months = "All Year"
-            } else {
-                months = "\(monthNorthern)"
-            }
-            return months
-        }
-        
-        var availableTimes: String {
-            var times = ""
-            if isAllDay {
-                times = "All Day"
-            } else {
-                times = "\(time.rawValue)"
-            }
-            return times
-        }
-    }
-    
     let id: Int
     let fileName: String
-    let name: [String: String]
+    let name: FishName
+//    let name: [String: String]
     let availability: FishAvailability
     let shadow: String
     let price: Int
@@ -68,20 +29,40 @@ struct Fish: Codable, Identifiable {
     let isCaught: Bool?
     let isDonated: Bool?
     
+//    public var localizedName: String {
+//        guard let languageCode = Locale.current.languageCode,
+//            let key = self.name.keys.first(where: { $0.suffix(2) == languageCode }),
+//            let localizedName = self.name[key]
+//            else {
+//                return self.name["name-en"] ?? self.name["name-USen"] ?? ""
+//        }
+//        return localizedName
+//    }
+    
     public var localizedName: String {
-        guard let languageCode = Locale.current.languageCode,
-            let key = self.name.keys.first(where: { $0.suffix(2) == languageCode }),
-            let localizedName = self.name[key]
-            else {
-                return self.name["name-en"] ?? self.name["name-USen"] ?? ""
-        }
-        return localizedName
+        return name.nameUSen
     }
     
     public var altCatchPhraseArray : [String] {
        get {
          return altCatchPhrase ?? []
        }
+    }
+    
+    public var checkCaught: Bool {
+        if isCaught == nil {
+            return false
+        } else {
+            return isCaught!
+        }
+    }
+    
+    public var checkDonated: Bool {
+        if isDonated == nil {
+            return false
+        } else {
+            return isDonated!
+        }
     }
 
     enum CodingKeys: String, CodingKey {
@@ -96,6 +77,96 @@ struct Fish: Codable, Identifiable {
         case altCatchPhrase = "alt-catch-phrase"
         case isCaught = "is-caught"
         case isDonated = "is-donated"
+    }
+}
+
+struct FishAvailability: Codable {
+    let monthNorthern: String
+    let monthSouthern: String
+    let time: FishTime
+    let isAllDay: Bool
+    let isAllYear: Bool
+    let location: FishLocation
+    let rarity: FishRarity
+    let monthArrayNorthern, monthArraySouthern: [Int]?
+
+    enum CodingKeys: String, CodingKey {
+        case monthNorthern = "month-northern"
+        case monthSouthern = "month-southern"
+        case time, isAllDay, isAllYear, location, rarity
+        case monthArrayNorthern = "month-array-northern"
+        case monthArraySouthern = "month-array-southern"
+    }
+    
+    var availableMonths: String {
+        var months = ""
+        if isAllYear {
+            months = "All Year"
+        } else {
+//            months = "\(monthNorthern)"
+            months = monthsString
+        }
+        return months
+    }
+    
+    var monthsString: String {
+        let str = monthNorthern
+            .replacingOccurrences(of: "12", with: "Dec")
+            .replacingOccurrences(of: "11", with: "Nov")
+            .replacingOccurrences(of: "10", with: "Oct")
+            .replacingOccurrences(of: "1", with: "Jan")
+            .replacingOccurrences(of: "2", with: "Feb")
+            .replacingOccurrences(of: "3", with: "Mar")
+            .replacingOccurrences(of: "4", with: "Apr")
+            .replacingOccurrences(of: "5", with: "May")
+            .replacingOccurrences(of: "6", with: "Jun")
+            .replacingOccurrences(of: "7", with: "Jul")
+            .replacingOccurrences(of: "8", with: "Aug")
+            .replacingOccurrences(of: "9", with: "Sep")
+        return str
+    }
+    
+    var availableTimes: String {
+        var times = ""
+        if isAllDay {
+            times = "All Day"
+        } else {
+            times = "\(time.rawValue)"
+        }
+        return times
+    }
+    
+    var activeMonths: [Int]? {
+        if let keys = monthArrayNorthern?.compactMap({ Int($0) }) {
+            return keys
+        }
+        return nil
+    }
+}
+
+// MARK: - Fish localization names
+struct FishName: Codable {
+    let nameUSen: String
+    let nameEUen, nameEUde, nameEUes: String?
+    let nameUSes, nameEUfr, nameUSfr, nameEUit: String?
+    let nameEUnl, nameCNzh, nameTWzh, nameJPja: String?
+    let nameKRko, nameEUru: String?
+
+    enum CodingKeys: String, CodingKey {
+        case nameUSen = "name-USen"
+        case nameEUen = "name-EUen"
+        case nameEUde = "name-EUde"
+        case nameEUes = "name-EUes"
+        case nameUSes = "name-USes"
+        case nameEUfr = "name-EUfr"
+        case nameUSfr = "name-USfr"
+        case nameEUit = "name-EUit"
+        case nameEUnl = "name-EUnl"
+        case nameCNzh = "name-CNzh"
+        case nameTWzh = "name-TWzh"
+        case nameJPja = "name-JPja"
+        case nameKRko = "name-KRko"
+        case nameEUru = "name-EUru"
     }
 }
 
@@ -128,33 +199,10 @@ enum FishTime: String, Codable {
     case the9Pm4Am = "9pm - 4am"
 }
 
-// MARK: - Fish localization names
-struct FishName: Codable {
-    let nameUSen, nameEUen, nameEUde, nameEUes: String
-    let nameUSes, nameEUfr, nameUSfr, nameEUit: String?
-    let nameEUnl, nameCNzh, nameTWzh, nameJPja: String?
-    let nameKRko, nameEUru: String?
 
-    enum CodingKeys: String, CodingKey {
-        case nameUSen = "name-USen"
-        case nameEUen = "name-EUen"
-        case nameEUde = "name-EUde"
-        case nameEUes = "name-EUes"
-        case nameUSes = "name-USes"
-        case nameEUfr = "name-EUfr"
-        case nameUSfr = "name-USfr"
-        case nameEUit = "name-EUit"
-        case nameEUnl = "name-EUnl"
-        case nameCNzh = "name-CNzh"
-        case nameTWzh = "name-TWzh"
-        case nameJPja = "name-JPja"
-        case nameKRko = "name-KRko"
-        case nameEUru = "name-EUru"
-    }
-}
 
-var fishPreview = Fish(id: 1, fileName: "bitterling", name: ["name-en": "bitterling"],
-    availability: Fish.FishAvailability(monthNorthern: "month-northern",
+var fishPreview = Fish(id: 1, fileName: "bitterling", name: FishName(nameUSen: "bitterling", nameEUen: "", nameEUde: "", nameEUes: "", nameUSes: "", nameEUfr: "", nameUSfr: "", nameEUit: "", nameEUnl: "", nameCNzh: "", nameTWzh: "", nameJPja: "", nameKRko: "", nameEUru: ""),
+    availability: FishAvailability(monthNorthern: "month-northern",
     monthSouthern: "month-southern", time: FishTime(rawValue: "the4Am9Pm")!,
     isAllDay: false, isAllYear: false, location: FishLocation(rawValue: "river")!,
     rarity: FishRarity(rawValue: "common")!, monthArrayNorthern: [1, 2, 3],
