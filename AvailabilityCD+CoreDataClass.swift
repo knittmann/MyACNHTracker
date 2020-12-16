@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(AvailabilityCD)
-public class AvailabilityCD: NSManagedObject {
+public class AvailabilityCD: NSManagedObject, Identifiable {
 
 }

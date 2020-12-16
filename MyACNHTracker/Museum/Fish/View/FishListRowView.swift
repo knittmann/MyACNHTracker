@@ -12,6 +12,7 @@ import SDWebImageSwiftUI
 struct FishListRowView: View {
     
     let fish: Fish
+//    @ObservedObject var fish: Fish
     
     var body: some View {
         

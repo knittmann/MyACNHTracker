@@ -17,19 +17,21 @@ public struct JsonApiManager {
                                                 qos: .userInitiated,
                                                 attributes: .concurrent)
     
-//    public static func fetchJson<T: Codable>(name: String) -> AnyPublisher<T ,APIError> {
-//        Result(catching: {
-//            guard let url = Bundle.main.url(forResource: name, withExtension: nil) else {
-//                throw APIError.message(reason: "Error loading JSON file")
-//            }
-//            return try Data(contentsOf: url)
-//        })
-//            .publisher
-//            .decode(type: T.self, decoder: Self.decoder)
-//            .mapError{ APIError.parseError(reason: $0.localizedDescription) }
-//            .subscribe(on: Self.apiQueue)
-//            .eraseToAnyPublisher()
-//    }
+    public static func fetchJson<T: Codable>(name: String) -> AnyPublisher<T ,APIError> {
+        Result(catching: {
+            guard let url = Bundle.main.url(forResource: name, withExtension: nil) else {
+                throw APIError.message(reason: "Error loading JSON file")
+            }
+            return try Data(contentsOf: url)
+        })
+            .publisher
+            .decode(type: T.self, decoder: Self.decoder)
+            .mapError{ APIError.parseError(reason: $0.localizedDescription) }
+            .subscribe(on: Self.apiQueue)
+            .eraseToAnyPublisher()
+    }
+    
+    
     
 //    static func fetchJson(name: String) -> Data
 //    {

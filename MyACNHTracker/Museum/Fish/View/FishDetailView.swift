@@ -25,6 +25,7 @@ struct FishDetailView: View {
             
             Spacer()
         }
+        .navigationBarTitle(fish.localizedName.capitalized)
     }
 }
 

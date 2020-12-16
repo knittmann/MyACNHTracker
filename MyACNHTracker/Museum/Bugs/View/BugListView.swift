@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct BugListView: View {
+    
     var body: some View {
         Text("BugListView")
     }

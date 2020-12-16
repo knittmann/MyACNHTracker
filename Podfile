@@ -7,6 +7,8 @@ target 'ACNHTracker' do
 
   # Pods for ACNHTracker
   pod 'Alamofire', '~> 5.2'
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'AWSiOSSDKv2'
 
   target 'ACNHTrackerTests' do
     inherit! :search_paths
